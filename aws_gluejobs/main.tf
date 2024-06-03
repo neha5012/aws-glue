@@ -14,7 +14,7 @@ provider "aws" {
 
 
 module "ss_work" {
-  source = "./aws_glue_job_module"
+  source = "./jobs_module"
 
   arn                       = "arn:aws:glue:us-east-1:162196492954:job/ss-work"
   connections               = ["Auroraconnection"]
@@ -65,7 +65,7 @@ module "ss_work" {
 }
 
 module "test_glue_job_poc" {
-  source = "./aws_glue_job_module"
+  source = "./jobs_module"
 
   arn                       = "arn:aws:glue:us-east-1:162196492954:job/test-glue-job-poc"
   connections               = ["Auroraconnection"]
